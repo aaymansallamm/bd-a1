@@ -1,0 +1,13 @@
+Capture real execution evidence. Do not treat this checklist as completed screenshots.
+01-build-success.png: final successful build message and custom image tag.
+02-images.png: docker images showing bd-a1:1.0.
+03-running-container.png: docker ps showing bd-a1-lab and published port.
+04-all-containers.png: docker ps -a including a stopped container after stop.
+05-logs.png: docker logs bd-a1-lab proving JupyterLab started; obscure the access token.
+06-inspect-mount.png: inspect Mounts shows host output folder and container destination.
+07-notebook.png: JupyterLab notebook executed, kernel idle, final output check passed.
+08-notebook-results.png: confusion matrix or other actual plotted notebook result.
+09-host-output.png: host output files and output/figures/*.png.
+10-persistence.png: same files still exist after stopping and removing bd-a1-lab.
+11-dockerhub-push.png: successful push with repository tag/digest.
+12-teammate-verification.png: teammate pull/run plus notebook output check on their machine.

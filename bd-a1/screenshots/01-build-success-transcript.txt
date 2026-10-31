@@ -1,0 +1,26 @@
+TRANSCRIPT EXCERPT - NOT A LIVE SCREENSHOT
+Source: supplied transcript, lines 158-218; excerpt with omission marked.
+
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker build --progress=plain -t b
+d-a1:1.0 .
+
+[... earlier build steps omitted; complete transcript is included ...]
+
+#11 [7/7] COPY --chown=1000:100 notebook/ ./notebook/
+#11 DONE 0.1s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.4s done
+#12 exporting manifest sha256:c4ccc21f893f4e1ad42f800a25874687b9de86be97f1d9769edd28867e278745 0.0s do
+ne
+#12 exporting config sha256:b1241a444d299e13271aaa762b7ff33ceabcae845d301899185194c8e318773a 0.0s done
+#12 exporting attestation manifest sha256:264bd5027968ce8f25685106b6a63bebfebc4f01d5aa839326c3bdc40ca7
+da5e
+#12 exporting attestation manifest sha256:264bd5027968ce8f25685106b6a63bebfebc4f01d5aa839326c3bdc40ca7
+#12 exporting manifest list sha256:1208968eba1676aa44f4c4e3ed9cb20f76b5e56fe9ced7ac62bcc8219a8b2a1e 0.
+#12 naming to docker.io/library/bd-a1:1.0
+#12 naming to docker.io/library/bd-a1:1.0 0.0s done
+#12 unpacking to docker.io/library/bd-a1:1.0
+#12 unpacking to docker.io/library/bd-a1:1.0 1.0s done
+#12 DONE 1.9s

@@ -1,0 +1,5 @@
+TRANSCRIPT EXCERPT - NOT A LIVE SCREENSHOT
+Source: complete docker inspect output supplied earlier in this chat; terminal line wrap joined.
+
+PS C:\Users\El-Khabeer> docker inspect --format '{{json .Mounts}}' bd-a1-lab
+[{"Type": "bind", "Source": "C:\\Users\\El-Khabeer\\Documents\\Codex\\2026-10-01\\ho\\outputs\\bd-a1\\output", "Destination": "/home/jovyan/bd-a1/output", "Mode": "", "RW": true, "Propagation": "rprivate"}]

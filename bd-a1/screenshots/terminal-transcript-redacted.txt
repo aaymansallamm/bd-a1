@@ -1,0 +1,437 @@
+PS C:\Users\El-Khabeer> docker logs bd-a1-lab
+INFO[2026-10-31 12:30:32] Entered start.sh with args: start-notebook.py --ServerApp.ip=0.0.0.0 --Serve
+rApp.root_dir=/home/jovyan/bd-a1
+INFO[2026-10-31 12:30:32] Running hooks in: /usr/local/bin/start-notebook.d as uid: 1000 gid: 100
+INFO[2026-10-31 12:30:32] Done running hooks in: /usr/local/bin/start-notebook.d
+INFO[2026-10-31 12:30:33] Running hooks in: /usr/local/bin/before-notebook.d as uid: 1000 gid: 100    
+INFO[2026-10-31 12:30:33] Sourcing shell script: /usr/local/bin/before-notebook.d/10activate-conda-env
+.sh
+INFO[2026-10-31 12:30:37] Done running hooks in: /usr/local/bin/before-notebook.d
+INFO[2026-10-31 12:30:37] Executing the command: start-notebook.py --ServerApp.ip=0.0.0.0 --ServerApp.
+root_dir=/home/jovyan/bd-a1
+Executing: jupyter lab --ServerApp.ip=0.0.0.0 --ServerApp.root_dir=/home/jovyan/bd-a1
+[I 2026-10-31 12:30:46.684 ServerApp] Extension package jupyter_lsp took 0.1346s to import
+[I 2026-10-31 12:30:46.873 ServerApp] Extension package jupyterlab_git took 0.1575s to import
+[W 2026-10-31 12:30:46.916 ServerApp] A `_jupyter_server_extension_points` function was not found in n
+bclassic. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. Th
+is function name will be deprecated in future releases of Jupyter Server.
+[I 2026-10-31 12:30:46.923 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2026-10-31 12:30:46.930 ServerApp] jupyter_server_terminals | extension was successfully linked.   
+[I 2026-10-31 12:30:46.940 ServerApp] jupyterlab | extension was successfully linked.
+[I 2026-10-31 12:30:46.940 ServerApp] jupyterlab_git | extension was successfully linked.
+[I 2026-10-31 12:30:46.951 ServerApp] nbclassic | extension was successfully linked.
+[I 2026-10-31 12:30:46.951 ServerApp] nbdime | extension was successfully linked.
+[I 2026-10-31 12:30:46.960 ServerApp] notebook | extension was successfully linked.
+[I 2026-10-31 12:30:46.968 ServerApp] Writing Jupyter server cookie secret to /home/jovyan/.local/shar
+e/jupyter/runtime/jupyter_cookie_secret
+[I 2026-10-31 12:30:47.274 ServerApp] notebook_shim | extension was successfully linked.
+[I 2026-10-31 12:30:47.591 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2026-10-31 12:30:47.595 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2026-10-31 12:30:47.601 ServerApp] jupyter_server_terminals | extension was successfully loaded.   
+[I 2026-10-31 12:30:47.639 LabApp] JupyterLab extension loaded from /opt/conda/lib/python3.13/site-pac
+kages/jupyterlab
+[I 2026-10-31 12:30:47.640 LabApp] JupyterLab application directory is /opt/conda/share/jupyter/lab   
+[I 2026-10-31 12:30:47.641 LabApp] Extension Manager is 'pypi'.
+[I 2026-10-31 12:30:47.831 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2026-10-31 12:30:47.842 ServerApp] jupyterlab_git | extension was successfully loaded.
+[I 2026-10-31 12:30:47.857 ServerApp] nbclassic | extension was successfully loaded.
+[I 2026-10-31 12:30:48.045 ServerApp] nbdime | extension was successfully loaded.
+[I 2026-10-31 12:30:48.051 ServerApp] notebook | extension was successfully loaded.
+[I 2026-10-31 12:30:48.052 ServerApp] Serving notebooks from local directory: /home/jovyan/bd-a1      
+[I 2026-10-31 12:30:48.052 ServerApp] Jupyter Server 2.21.1 is running at:
+[I 2026-10-31 12:30:48.053 ServerApp] http://0.0.0.0:8888/lab?token=[REDACTED]
+[I 2026-10-31 12:30:48.053 ServerApp]     http://127.0.0.1:8888/lab?token=[REDACTED]
+[I 2026-10-31 12:30:48.053 ServerApp] Use Control-C to stop this server and shut down all kernels (twi
+ce to skip confirmation).
+[C 2026-10-31 12:30:48.058 ServerApp]
+
+    To access the server, open this file in a browser:
+        file:///home/jovyan/.local/share/jupyter/runtime/jpserver-7-open.html
+        http://e663e33bea8f:8888/lab?token=[REDACTED]
+        http://127.0.0.1:8888/lab?token=[REDACTED]
+    The server is listening on all interfaces, so any hostname or IP of this machine will work.       
+[I 2026-10-31 12:30:48.104 ServerApp] Skipped non-installed server(s): basedpyright, bash-language-ser
+ver, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-
+language-server, pyrefly, pyright, python-language-server, python-lsp-server, r-languageserver, sql-la
+nguage-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-
+bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+PS C:\Users\El-Khabeer> docker ps
+CONTAINER ID   IMAGE                              COMMAND                  CREATED          STATUS    
+                PORTS                      NAMES
+e663e33bea8f   bd-a1:1.0                          "tini -g -- start.sh…"   17 minutes ago   Up 17 minu
+tes (healthy)   127.0.0.1:8888->8888/tcp   bd-a1-lab
+2acd915a7a5a   mongodb/mongodb-community-server   "python3 /usr/local/…"   2 days ago       Up 2 days 
+                27017/tcp                  mongo
+06c4abc71384   python:3.12-slim                   "bash"                   2 weeks ago      Up 2 days 
+PS C:\Users\El-Khabeer> docker ps -a
+CONTAINER ID   IMAGE                              COMMAND                  CREATED          STATUS    
+tes (healthy)   127.0.0.1:8888->8888/tcp   bd-a1-lab
+                27017/tcp                  mongo
+06c4abc71384   python:3.12-slim                   "bash"                   2 weeks ago      Up 2 days 
+                                           hello
+[{"Type":"bind","Source":"C:\\Users\\El-Khabeer\\Documents\\Codex\\2026-10-01\\ho\\outputs\\bd-a1\\out
+PS C:\Users\El-Khabeer> Set-Location "C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1"
+
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker cp bd-a1-lab:/home/jovyan/b
+d-a1/notebook/analysis.ipynb .\notebook\analysis.ipynb
+Successfully copied 636kB (transferred 637kB) to C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\out
+puts\bd-a1\notebook\analysis.ipynb
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> Copy-Item .\notebook\analysis.ipyn
+b .\output\analysis_executed.ipynb
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> Get-ChildItem .\output
+>> Get-ChildItem .\output\figures
+
+
+    Directory: C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1\output
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        10/31/2026   2:45 PM                figures
+-a----        10/31/2026   2:47 PM         635637 analysis_executed.ipynb
+-a----        10/31/2026   2:44 PM            141 classification_metrics.csv
+-a----        10/31/2026   2:44 PM        2822569 cleaned_data.csv
+-a----        10/31/2026   2:45 PM           1455 cluster_summary.txt
+-a----        10/31/2026   2:45 PM            167 cluster_top_terms.csv
+-a----        10/31/2026   2:45 PM          23655 environment_requirements.txt
+-a----        10/31/2026   2:44 PM            851 model_metrics.txt
+-a----        10/31/2026   2:44 PM           1316 text_insights.md
+
+
+    Directory: C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1\output\figures
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        10/31/2026   2:44 PM          16973 average_text_length.png
+-a----        10/31/2026   2:44 PM          70859 correlation_heatmap.png
+-a----        10/31/2026   2:45 PM         331192 kmeans_clusters_pca.png
+-a----        10/31/2026   2:45 PM          64554 kmeans_k_selection.png
+-a----        10/31/2026   2:44 PM          39291 sampling_comparison.png
+-a----        10/31/2026   2:44 PM          21153 top_20_words.png
+-a----        10/31/2026   2:44 PM          25697 top_20_words_without_stopwords.png
+
+
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> Get-Item .\notebook\analysis.ipynb
+
+
+    Directory: C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1\notebook
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        10/31/2026   2:47 PM         635637 analysis.ipynb
+
+
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker stop bd-a1-lab
+>> docker ps -a
+CONTAINER ID   IMAGE                              COMMAND                  CREATED          STATUS    
+                          PORTS       NAMES
+e663e33bea8f   bd-a1:1.0                          "tini -g -- start.sh…"   24 minutes ago   Exited (0)
+ Less than a second ago               bd-a1-lab
+2acd915a7a5a   mongodb/mongodb-community-server   "python3 /usr/local/…"   2 days ago       Up 2 days 
+                          27017/tcp   mongo
+06c4abc71384   python:3.12-slim                   "bash"                   2 weeks ago      Up 2 days 
+                                      hello
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker rm bd-a1-lab
+>> Get-ChildItem .\output
+bd-a1-lab
+
+
+    Directory: C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1\output
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        10/31/2026   2:45 PM                figures
+-a----        10/31/2026   2:47 PM         635637 analysis_executed.ipynb
+-a----        10/31/2026   2:44 PM        2822569 cleaned_data.csv
+-a----        10/31/2026   2:45 PM           1455 cluster_summary.txt
+-a----        10/31/2026   2:45 PM            167 cluster_top_terms.csv
+-a----        10/31/2026   2:45 PM          23655 environment_requirements.txt
+-a----        10/31/2026   2:44 PM            851 model_metrics.txt
+-a----        10/31/2026   2:44 PM           1316 text_insights.md
+
+
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker build --progress=plain -t b
+d-a1:1.0 .
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 639B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for quay.io/jupyter/scipy-notebook:latest
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 131B 0.0s done
+#3 DONE 0.1s
+
+#4 [internal] load build context
+#4 ...
+
+#5 [1/7] FROM quay.io/jupyter/scipy-notebook:latest@sha256:5d35c495b8544caa2b6bcf6634493e6003004a6b638
+8019533c6dca32c35658e
+#5 resolve quay.io/jupyter/scipy-notebook:latest@sha256:5d35c495b8544caa2b6bcf6634493e6003004a6b638801
+9533c6dca32c35658e 0.1s done
+#5 DONE 0.2s
+
+#4 [internal] load build context
+#4 transferring context: 636.00kB 0.5s done
+#4 DONE 0.6s
+
+#6 [3/7] WORKDIR /home/jovyan/bd-a1
+#6 CACHED
+
+#7 [4/7] COPY --chown=1000:100 requirements.txt ./
+#7 CACHED
+
+#8 [5/7] RUN pip install --no-cache-dir -r requirements.txt
+#8 CACHED
+
+#9 [2/7] RUN mkdir -p /home/jovyan/bd-a1/output/figures     && chown -R 1000:100 /home/jovyan/bd-a1   
+#9 CACHED
+
+#10 [6/7] COPY --chown=1000:100 data/ ./data/
+#10 CACHED
+
+#11 [7/7] COPY --chown=1000:100 notebook/ ./notebook/
+#11 DONE 0.1s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.4s done
+#12 exporting manifest sha256:c4ccc21f893f4e1ad42f800a25874687b9de86be97f1d9769edd28867e278745 0.0s do
+ne
+#12 exporting config sha256:b1241a444d299e13271aaa762b7ff33ceabcae845d301899185194c8e318773a 0.0s done
+#12 exporting attestation manifest sha256:264bd5027968ce8f25685106b6a63bebfebc4f01d5aa839326c3bdc40ca7
+da5e
+#12 exporting attestation manifest sha256:264bd5027968ce8f25685106b6a63bebfebc4f01d5aa839326c3bdc40ca7
+#12 exporting manifest list sha256:1208968eba1676aa44f4c4e3ed9cb20f76b5e56fe9ced7ac62bcc8219a8b2a1e 0.
+#12 naming to docker.io/library/bd-a1:1.0
+#12 naming to docker.io/library/bd-a1:1.0 0.0s done
+#12 unpacking to docker.io/library/bd-a1:1.0
+#12 unpacking to docker.io/library/bd-a1:1.0 1.0s done
+#12 DONE 1.9s
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker run -d --name bd-a1-lab -p 
+127.0.0.1:8888:8888 --mount "type=bind,source=C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\output
+s\bd-a1\output,target=/home/jovyan/bd-a1/output" bd-a1:1.0
+74291361a2d0bfb64a60ea0b40be479a41e53931c6e007a3c97b23a4982940b5
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker logs bd-a1-lab
+INFO[2026-10-31 12:56:38] Entered start.sh with args: start-notebook.py --ServerApp.ip=0.0.0.0 --Serve
+INFO[2026-10-31 12:56:39] Running hooks in: /usr/local/bin/start-notebook.d as uid: 1000 gid: 100     
+INFO[2026-10-31 12:56:39] Done running hooks in: /usr/local/bin/start-notebook.d
+INFO[2026-10-31 12:56:39] Running hooks in: /usr/local/bin/before-notebook.d as uid: 1000 gid: 100    
+INFO[2026-10-31 12:56:39] Sourcing shell script: /usr/local/bin/before-notebook.d/10activate-conda-env
+.sh
+INFO[2026-10-31 12:56:42] Done running hooks in: /usr/local/bin/before-notebook.d
+INFO[2026-10-31 12:56:43] Executing the command: start-notebook.py --ServerApp.ip=0.0.0.0 --ServerApp.
+root_dir=/home/jovyan/bd-a1
+Executing: jupyter lab --ServerApp.ip=0.0.0.0 --ServerApp.root_dir=/home/jovyan/bd-a1
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker logs --tail 30 bd-a1-lab   
+[W 2026-10-31 13:00:36.549 ServerApp] Couldn't authenticate WebSocket connection
+[W 2026-10-31 13:00:36.551 ServerApp] 403 GET /api/events/subscribe (@172.17.0.1) 2.70ms referer=None
+[W 2026-10-31 13:00:38.119 ServerApp] Couldn't authenticate WebSocket connection
+[W 2026-10-31 13:00:38.121 ServerApp] 403 GET /api/events/subscribe (@172.17.0.1) 2.40ms referer=None 
+[W 2026-10-31 13:00:40.651 ServerApp] Couldn't authenticate WebSocket connection
+[W 2026-10-31 13:00:40.653 ServerApp] 403 GET /api/events/subscribe (@172.17.0.1) 2.05ms referer=None 
+[W 2026-10-31 13:00:42.212 ServerApp] Couldn't authenticate WebSocket connection
+[W 2026-10-31 13:00:42.214 ServerApp] 403 GET /api/events/subscribe (@172.17.0.1) 2.60ms referer=None 
+[W 2026-10-31 13:00:43.486 ServerApp] wrote error: 'Forbidden'
+[W 2026-10-31 13:00:43.487 ServerApp] 403 GET /api/sessions?1793451643483 (@172.17.0.1) 1.13ms referer
+=http://127.0.0.1:8888/lab/tree/notebook
+[W 2026-10-31 13:00:45.482 ServerApp] Couldn't authenticate WebSocket connection
+[W 2026-10-31 13:00:45.484 ServerApp] 403 GET /api/events/subscribe (@172.17.0.1) 2.46ms referer=None 
+[W 2026-10-31 13:00:45.893 ServerApp] wrote error: 'Forbidden'
+[W 2026-10-31 13:00:45.894 ServerApp] 403 GET /api/contents/notebook?content=1&hash=0&1793451645886 (@
+172.17.0.1) 1.98ms referer=http://127.0.0.1:8888/lab/tree/notebook
+[W 2026-10-31 13:00:51.481 ServerApp] Couldn't authenticate WebSocket connection
+[W 2026-10-31 13:00:51.482 ServerApp] 403 GET /api/events/subscribe (@172.17.0.1) 2.27ms referer=None 
+[W 2026-10-31 13:00:55.914 ServerApp] wrote error: 'Forbidden'
+[W 2026-10-31 13:00:55.914 ServerApp] 403 GET /api/contents/notebook?content=1&hash=0&1793451655909 (@
+172.17.0.1) 1.30ms referer=http://127.0.0.1:8888/lab/tree/notebook
+[W 2026-10-31 13:01:00.079 ServerApp] Couldn't authenticate WebSocket connection
+[W 2026-10-31 13:01:00.081 ServerApp] 403 GET /api/events/subscribe (@172.17.0.1) 1.89ms referer=None 
+[W 2026-10-31 13:01:05.925 ServerApp] wrote error: 'Forbidden'
+[W 2026-10-31 13:01:05.926 ServerApp] 403 GET /api/contents/notebook?content=1&hash=0&1793451665922 (@
+172.17.0.1) 1.38ms referer=http://127.0.0.1:8888/lab/tree/notebook
+[W 2026-10-31 13:01:15.946 ServerApp] wrote error: 'Forbidden'
+[W 2026-10-31 13:01:15.946 ServerApp] 403 GET /api/contents/notebook?content=1&hash=0&1793451675941 (@
+[W 2026-10-31 13:01:19.719 ServerApp] Couldn't authenticate WebSocket connection
+[W 2026-10-31 13:01:19.721 ServerApp] 403 GET /api/events/subscribe (@172.17.0.1) 2.06ms referer=None 
+[W 2026-10-31 13:01:25.958 ServerApp] 403 GET /api/contents/notebook?content=1&hash=0&1793451685950 (@
+172.17.0.1) 1.47ms referer=http://127.0.0.1:8888/lab/tree/notebook
+[W 2026-10-31 13:01:31.309 ServerApp] wrote error: 'Forbidden'
+[W 2026-10-31 13:01:31.309 ServerApp] 403 POST /api/contents/notebook?1793451691301 (@172.17.0.1) 1.53
+ms referer=http://127.0.0.1:8888/lab/tree/notebook
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker exec bd-a1-lab jupyter serv
+er list
+Currently running servers:
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker login --username ayman2287 
+
+i Info → A Personal Access Token (PAT) can be used instead.
+         To create a PAT, visit https://app.docker.com/settings
+
+
+Password:
+Error response from daemon: Get "https://registry-1.docker.io/v2/": unauthorized: incorrect username o
+
+i Info → A Personal Access Token (PAT) can be used instead.
+         To create a PAT, visit https://app.docker.com/settings
+
+
+Password:
+Login Succeeded
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker tag bd-a1:1.0 ayman2287/bd-
+a1:1.0
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker push ayman2287/bd-a1:1.0   
+The push refers to repository [docker.io/ayman2287/bd-a1]
+f3228be2658e: Pushed
+44136fa355b3: Pushed
+06ad70e463aa: Pushed
+4e07a0f12b2c: Pushing  3.146MB/41.84MB
+befbbdc715bd: Pushing  1.049MB/14.56MB
+befbbdc715bd: Pushing  1.049MB/14.56MB
+befbbdc715bd: Pushing  1.049MB/14.56MB
+befbbdc715bd: Pushing  1.049MB/14.56MB
+4f4fb700ef54: Mounted from mongodb/mongodb-community-server
+befbbdc715bd: Pushing  14.56MB/14.56MB
+4e07a0f12b2c: Pushing  25.17MB/41.84MB
+4e07a0f12b2c: Pushing  25.17MB/41.84MB
+4e07a0f12b2c: Pushing  25.17MB/41.84MB
+bc0726cfdd50: Pushing  26.21MB/144.9MB
+4e07a0f12b2c: Pushing  37.75MB/41.84MB
+bc0726cfdd50: Pushing  55.57MB/144.9MB
+b7d9f254c5df: Pushed
+fe6d5ffc5c63: Pushed
+bc0726cfdd50: Pushing  66.06MB/144.9MB
+4f4fb700ef54: Mounted from mongodb/mongodb-community-server
+bc0726cfdd50: Pushing  68.16MB/144.9MB
+bc0726cfdd50: Pushing  68.16MB/144.9MB
+8b9170061e5e: Pushing  55.57MB/223.6MB
+bc0726cfdd50: Pushing  74.45MB/144.9MB
+bc0726cfdd50: Pushing  144.9MB/144.9MB
+
+335014ac15af: Pushing  178.2MB/346.4MB
+0cc7a3528b38: Pushing  140.1MB/387.1MB
+ba89147ad6fa: Pushed
+81cfb17f731f: Pushed
+7fa7d0a84384: Pushed
+e0a995b9fa2c: Pushed
+e1640b9f2bc3: Pushed
+failed commit on ref "layer-sha256:bc0726cfdd5019018bbd95422f93e70f0df791f2a910c35e3b82805b96860d4b": 
+failed to do request: Put "[registry upload URL redacted]: net/http: timeout awaiting response headers
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> ^C
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker push ayman2287/bd-a1:1.0   
+The push refers to repository [docker.io/ayman2287/bd-a1]
+f3228be2658e: Already exists 
+44136fa355b3: Already exists
+06ad70e463aa: Layer already exists
+4e07a0f12b2c: Layer already exists
+21da321b0a09: Layer already exists 
+befbbdc715bd: Layer already exists 
+4f4fb700ef54: Layer already exists
+0c7abc17cef4: Layer already exists
+6f739619dd49: Layer already exists
+b422555f5495: Layer already exists
+805391b5214d: Layer already exists
+4f4fb700ef54: Layer already exists
+8df5e9569a9b: Layer already exists
+456c41892944: Layer already exists
+4f4fb700ef54: Layer already exists 
+74a778723673: Layer already exists
+bc0726cfdd50: Layer already exists
+4f4fb700ef54: Layer already exists
+2a1272b6ca5d: Waiting
+b7d9f254c5df: Layer already exists
+2a1272b6ca5d: Layer already exists
+4f4fb700ef54: Layer already exists
+8b9170061e5e: Waiting
+8b9170061e5e: Waiting
+8b9170061e5e: Waiting
+71f455a6b000: Layer already exists
+335014ac15af: Waiting
+81cfb17f731f: Layer already exists
+0cc7a3528b38: Waiting
+7fa7d0a84384: Layer already exists
+e0a995b9fa2c: Layer already exists
+e1640b9f2bc3: Waiting
+af124eacee81: Waiting
+push access denied, repository does not exist or may require authorization: server message: insufficie
+nt_scope: authorization failed
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> ^C
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker push ayman2287/bd-a1:1.0   
+The push refers to repository [docker.io/ayman2287/bd-a1]
+f3228be2658e: Already exists
+44136fa355b3: Already exists
+4e07a0f12b2c: Layer already exists
+06ad70e463aa: Layer already exists
+befbbdc715bd: Layer already exists
+21da321b0a09: Layer already exists
+4f4fb700ef54: Layer already exists
+0c7abc17cef4: Layer already exists
+4f4fb700ef54: Layer already exists
+b422555f5495: Layer already exists
+4f4fb700ef54: Layer already exists
+8df5e9569a9b: Layer already exists
+bc0726cfdd50: Layer already exists
+6f739619dd49: Layer already exists
+4f4fb700ef54: Layer already exists
+456c41892944: Layer already exists
+d87e472a4a41: Layer already exists
+4f4fb700ef54: Layer already exists
+2a1272b6ca5d: Layer already exists
+4f4fb700ef54: Layer already exists
+4f4fb700ef54: Layer already exists
+8b9170061e5e: Waiting 
+8b9170061e5e: Waiting
+8b9170061e5e: Waiting
+8b9170061e5e: Waiting
+8b4384ba8ebb: Layer already exists
+335014ac15af: Waiting
+ba89147ad6fa: Layer already exists
+81cfb17f731f: Layer already exists
+7fa7d0a84384: Layer already exists
+e0a995b9fa2c: Waiting
+e1640b9f2bc3: Waiting
+af124eacee81: Waiting
+push access denied, repository does not exist or may require authorization: server message: insufficie
+nt_scope: authorization failed
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker logout
+>> docker login --username ayman2287
+Removing login credentials for https://index.docker.io/v1/
+
+         To create a PAT, visit https://app.docker.com/settings
+
+
+Password:
+Error response from daemon: Get "https://registry-1.docker.io/v2/": Get "https://auth.docker.io/token?
+account=ayman2287&client_id=docker&offline_token=[REDACTED]&service=registry.docker.io": context deadline ex
+ceeded (Client.Timeout exceeded while awaiting headers) (Client.Timeout exceeded while awaiting header
+s)
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker logout
+>> docker login --username ayman2287
+Removing login credentials for https://index.docker.io/v1/
+i Info → A Personal Access Token (PAT) can be used instead.
+         To create a PAT, visit https://app.docker.com/settings
+
+
+Password:
+Error response from daemon: Get "https://registry-1.docker.io/v2/": Get "https://auth.docker.io/token?
+account=ayman2287&client_id=docker&offline_token=[REDACTED]&service=registry.docker.io": context deadline ex
+ceeded (Client.Timeout exceeded while awaiting headers)
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker logout
+>> docker login --username ayman2287
+Removing login credentials for https://index.docker.io/v1/
+
+i Info → A Personal Access Token (PAT) can be used instead.
+         To create a PAT, visit https://app.docker.com/settings
+
+
+Password:
+Error response from daemon: Get "https://registry-1.docker.io/v2/": Get "https://auth.docker.io/token?
+account=ayman2287&client_id=docker&offline_token=[REDACTED]&service=registry.docker.io": net/http: request c
+anceled while waiting for connection (Client.Timeout exceeded while awaiting headers) (Client.Timeout 
+exceeded while awaiting headers)
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1>

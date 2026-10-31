@@ -1,0 +1,13 @@
+TRANSCRIPT EXCERPT - NOT A LIVE SCREENSHOT
+Source: supplied transcript, lines 128-137; original line wraps retained.
+
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker stop bd-a1-lab
+>> docker ps -a
+CONTAINER ID   IMAGE                              COMMAND                  CREATED          STATUS    
+                          PORTS       NAMES
+e663e33bea8f   bd-a1:1.0                          "tini -g -- start.sh…"   24 minutes ago   Exited (0)
+ Less than a second ago               bd-a1-lab
+2acd915a7a5a   mongodb/mongodb-community-server   "python3 /usr/local/…"   2 days ago       Up 2 days 
+                          27017/tcp   mongo
+06c4abc71384   python:3.12-slim                   "bash"                   2 weeks ago      Up 2 days 
+                                      hello

@@ -1,0 +1,38 @@
+K-Means with k=2, random_state=42
+Representation: TF-IDF -> 100-component TruncatedSVD -> L2 normalization
+Reason for k: interpretable two-topic hypothesis; not automatically the silhouette optimum.
+
+Cluster sizes:
+         n_records  share_%
+cluster                    
+0             4415     85.5
+1              751     14.5
+
+Silhouette score: 0.0211
+Purity: 0.9388; ARI: 0.6806; NMI: 0.4910
+
+Cluster vs original label:
+label     ham  spam  total  spam_%
+cluster                           
+0        4306   109   4415     2.5
+1         207   544    751    72.4
+
+Top terms:
+   Cluster 0 Cluster 1
+1         im        ur
+2         ok      free
+3       just       txt
+4       come      stop
+5       dont    mobile
+6        got     reply
+7       good      text
+8       like     claim
+9       know     prize
+10      time      cash
+11       ill       won
+12     going   contact
+
+Interpretation:
+Cluster 0: 4415 messages, 2.5% spam; majority label is ham. Top words: im, ok, just, come, dont, got, good, like. These describe vocabulary groupings; cluster IDs are not class IDs.
+Cluster 1: 751 messages, 72.4% spam; majority label is spam. Top words: ur, free, txt, stop, mobile, reply, text, claim. These describe vocabulary groupings; cluster IDs are not class IDs.
+Silhouette measures geometric separation; label agreement measures something different. Overlapping short-message vocabulary can give a low silhouette even when clusters agree with known labels.

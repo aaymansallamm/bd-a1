@@ -1,0 +1,20 @@
+TRANSCRIPT EXCERPT - NOT A LIVE SCREENSHOT
+Source: supplied transcript, command on line 1 and lines 40-54; tokens redacted.
+
+PS C:\Users\El-Khabeer> docker logs bd-a1-lab
+
+[... earlier startup messages omitted ...]
+
+[I 2026-10-31 12:30:48.052 ServerApp] Serving notebooks from local directory: /home/jovyan/bd-a1      
+[I 2026-10-31 12:30:48.052 ServerApp] Jupyter Server 2.21.1 is running at:
+[I 2026-10-31 12:30:48.053 ServerApp] http://0.0.0.0:8888/lab?token=[REDACTED]
+[I 2026-10-31 12:30:48.053 ServerApp]     http://127.0.0.1:8888/lab?token=[REDACTED]
+[I 2026-10-31 12:30:48.053 ServerApp] Use Control-C to stop this server and shut down all kernels (twi
+ce to skip confirmation).
+[C 2026-10-31 12:30:48.058 ServerApp]
+
+    To access the server, open this file in a browser:
+        file:///home/jovyan/.local/share/jupyter/runtime/jpserver-7-open.html
+        http://e663e33bea8f:8888/lab?token=[REDACTED]
+        http://127.0.0.1:8888/lab?token=[REDACTED]
+    The server is listening on all interfaces, so any hostname or IP of this machine will work.

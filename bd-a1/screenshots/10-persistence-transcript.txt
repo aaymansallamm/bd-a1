@@ -1,0 +1,21 @@
+TRANSCRIPT EXCERPT - NOT A LIVE SCREENSHOT
+Source: supplied transcript, lines 138-157.
+
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> docker rm bd-a1-lab
+>> Get-ChildItem .\output
+bd-a1-lab
+
+
+    Directory: C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1\output
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        10/31/2026   2:45 PM                figures
+-a----        10/31/2026   2:47 PM         635637 analysis_executed.ipynb
+-a----        10/31/2026   2:44 PM        2822569 cleaned_data.csv
+-a----        10/31/2026   2:45 PM           1455 cluster_summary.txt
+-a----        10/31/2026   2:45 PM            167 cluster_top_terms.csv
+-a----        10/31/2026   2:45 PM          23655 environment_requirements.txt
+-a----        10/31/2026   2:44 PM            851 model_metrics.txt
+-a----        10/31/2026   2:44 PM           1316 text_insights.md

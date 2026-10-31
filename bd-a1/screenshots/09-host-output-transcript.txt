@@ -1,0 +1,35 @@
+TRANSCRIPT EXCERPT - NOT A LIVE SCREENSHOT
+Source: supplied transcript, lines 83-116; original listing retained.
+
+PS C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1> Get-ChildItem .\output
+>> Get-ChildItem .\output\figures
+
+
+    Directory: C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1\output
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        10/31/2026   2:45 PM                figures
+-a----        10/31/2026   2:47 PM         635637 analysis_executed.ipynb
+-a----        10/31/2026   2:44 PM            141 classification_metrics.csv
+-a----        10/31/2026   2:44 PM        2822569 cleaned_data.csv
+-a----        10/31/2026   2:45 PM           1455 cluster_summary.txt
+-a----        10/31/2026   2:45 PM            167 cluster_top_terms.csv
+-a----        10/31/2026   2:45 PM          23655 environment_requirements.txt
+-a----        10/31/2026   2:44 PM            851 model_metrics.txt
+-a----        10/31/2026   2:44 PM           1316 text_insights.md
+
+
+    Directory: C:\Users\El-Khabeer\Documents\Codex\2026-10-01\ho\outputs\bd-a1\output\figures
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        10/31/2026   2:44 PM          16973 average_text_length.png
+-a----        10/31/2026   2:44 PM          70859 correlation_heatmap.png
+-a----        10/31/2026   2:45 PM         331192 kmeans_clusters_pca.png
+-a----        10/31/2026   2:45 PM          64554 kmeans_k_selection.png
+-a----        10/31/2026   2:44 PM          39291 sampling_comparison.png
+-a----        10/31/2026   2:44 PM          21153 top_20_words.png
+-a----        10/31/2026   2:44 PM          25697 top_20_words_without_stopwords.png
